@@ -36,10 +36,10 @@ contract ERC6551Registry {
         uint256 salt
     ) external returns (address) {
         // Precompute address via create2
-        address account = account(implementation, chainId, tokenContract, tokenId, salt);
-        if (_isContract(account)) {
+        address computedAccount = account(implementation, chainId, tokenContract, tokenId, salt);
+        if (_isContract(computedAccount)) {
             // Already deployed
-            return account;
+            return computedAccount;
         }
 
         bytes32 create2Salt = _getSalt(implementation, chainId, tokenContract, tokenId, salt);
@@ -58,8 +58,8 @@ contract ERC6551Registry {
             }
         }
 
-        emit AccountCreated(account, implementation, chainId, tokenContract, tokenId, salt);
-        return account;
+        emit AccountCreated(computedAccount, implementation, chainId, tokenContract, tokenId, salt);
+        return computedAccount;
     }
 
     /**

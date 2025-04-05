@@ -9,21 +9,15 @@ import "../src/MyERC721.sol";
  */
 contract DeployERC721 is Script {
     function run() external {
-        // 1) 준비
-        uint256 pk = vm.envUint("PRIVATE_KEY");
-        string memory rpc = vm.envString("SEPOLIA_RPC_URL");
-        vm.createSelectFork(rpc);
+        uint256 privateKey = vm.envUint("PRIVATE_KEY");
+        address deployer = vm.addr(privateKey);
 
-        vm.startBroadcast(pk);
+        vm.startBroadcast(privateKey);
 
-        // 2) 배포
-        MyERC721 myNft = new MyERC721();
-        console.log("MyERC721 deployed at:", address(myNft));
+        MyERC721 nft721 = new MyERC721("Vault6551 NFT", "V6551", deployer);
+        nft721.mint(deployer, 1);
 
-        // 3) NFT 민팅 (owner는 현재 컨트랙트가 됨 → transferOwnership 등)
-        //    여기서는 그냥 contract가 ownable. 아래에서 만약 msg.sender==owner 였다면 mint가 가능
-        myNft.mintTo(msg.sender);
-        console.log("Minted tokenId=1 for EOA:", msg.sender);
+        console.log("NFT deployed at:", address(nft721));
 
         vm.stopBroadcast();
     }
