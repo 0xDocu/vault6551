@@ -76,6 +76,10 @@ SOLANA_RECIPIENT_HEX=<Solana recipient address (hex)>
 SOLANA_PRIVATE_KEY_JSON=<Path to Solana private key JSON>
 ```
 
+## ORAKLE Academic Activities
+
+This repository is part of my research and experiments conducted at ORAKLE blockchain research group, focusing on cross-chain interoperability.
+
 ## Contributing
 
 Contributions are welcome! Please create a pull request or open an issue to discuss any improvements or ideas.
