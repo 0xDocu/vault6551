@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.2.0",
+    "@wormhole-foundation/sdk": "^1.14.1",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5"
+  }
 }
