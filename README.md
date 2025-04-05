@@ -1,4 +1,4 @@
-# Vault6551: Cross-chain NFT Vault with ERC-6551 and Wormhole
+# Vault6551: Tranferable Multichain Vault NFT with ERC-6551 and Wormhole
 
 Vault6551 is a demonstration repository showcasing how to integrate ERC-6551 Token Bound Accounts (TBAs) with Wormhole to facilitate cross-chain NFT vaults and token staking, particularly bridging Ethereum (Sepolia testnet) and Solana (devnet/testnet).
 
