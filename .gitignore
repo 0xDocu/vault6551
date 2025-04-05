@@ -19,3 +19,4 @@ secrets/
 anchor/
 clients/
 lib/
+lib/forge-std/
