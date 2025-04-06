@@ -75,6 +75,12 @@ SOLANA_CHAIN_ID=1
 SOLANA_RECIPIENT_HEX=<Solana recipient address (hex)>
 SOLANA_PRIVATE_KEY_JSON=<Path to Solana private key JSON>
 ```
+## Known Limitation
+
+VAA submission for the following transaction is still under development:
+0x0adf6a5b32d2923780c0c4554670dcab2111260699dc78bb618665cae7492d66
+
+https://wormholescan.io/#/tx/0x0adf6a5b32d2923780c0c4554670dcab2111260699dc78bb618665cae7492d66?network=Testnet
 
 ## ORAKLE Academic Activities
 
